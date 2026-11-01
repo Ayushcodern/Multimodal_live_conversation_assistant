@@ -1,0 +1,62 @@
+id,language,reference_text,true_intent,expected_gesture_meaning,gesture_direction,context_other_said,syllables,notes
+EN_01,en,I need water,request_water,I want water,inward,Are you thirsty?,4,Direct need
+EN_02,en,I want food,request_food,I want food,inward,Are you hungry?,3,Direct need
+EN_03,en,I need my medicine,request_medicine,Medicine needed,down,Did you take your pills?,5,Medical need
+EN_04,en,I am in pain,pain,I am in pain,upward,Where does it hurt?,4,Urgent need
+EN_05,en,I need the washroom,toilet,Washroom needed,inward,Do you need the restroom?,5,Personal care
+EN_06,en,I need help,help_emergency,I need help,upward,Is everything okay?,3,Emergency assistance
+EN_07,en,Please call someone,call_person,Call someone,outward,Should I get the nurse?,4,Communication request
+EN_08,en,I am feeling tired,tired_rest,Tired,down,Do you want to sleep?,5,State of being
+EN_09,en,I feel hot,temperature,Too hot,outward,Is the room too warm?,3,Environmental need
+EN_10,en,I feel cold,temperature,Too cold,inward,Do you want a blanket?,3,Environmental need
+EN_11,en,Pass me the remote,entertainment,Need remote,outward,Want to watch TV?,5,Object request
+EN_12,en,Give me my spectacles,request_object,Spectacles needed,upward,Looking for your glasses?,6,Object request
+EN_13,en,Yes,yes,Yes,nod,Did you eat lunch?,1,Affirmative
+EN_14,en,No,no,No,shake,Do you want tea?,1,Negative
+EN_15,en,Thank you,thanks,Thank you,inward,Here is your water.,2,Politeness
+EN_16,en,Good morning,greeting,Greeting,outward,Hello there.,3,Social greeting
+EN_17,en,Please repeat that,repeat_please,Please repeat,shake,Did you hear the doctor?,4,Clarification
+EN_18,en,Please wait,wait,Please wait,outward,Ready to go now?,2,Pacing
+EN_19,en,I want to listen to music,entertainment,Music request,outward,Can I play a song for you?,7,Leisure need
+EN_20,en,What did you say,repeat_please,Please repeat,shake,I asked about your medicine.,4,Clarification
+HI_01,hi,mujhe pani chahiye,request_water,I want water,inward,Kya aapko pyas lagi hai?,6,Direct need
+HI_02,hi,mujhe khana do,request_food,I want food,inward,Kya khana khaoge?,5,Direct need
+HI_03,hi,dawa de do,request_medicine,Medicine needed,down,Dawa ka samay ho gaya?,4,Medical need
+HI_04,hi,mujhe dard ho raha hai,pain,I am in pain,upward,Kahan dard hai?,7,Urgent need
+HI_05,hi,shauchalay jana hai,toilet,Washroom needed,inward,Washroom jana hai?,6,Personal care
+HI_06,hi,meri madad karo,help_emergency,I need help,upward,Kya hua koi pareshani hai?,5,Emergency assistance
+HI_07,hi,kisi ko bulao,call_person,Call someone,outward,Nurse ko bulaun?,5,Communication request
+HI_08,hi,main thak gaya hoon,tired_rest,Tired,down,Aaram karna chahte ho?,5,State of being
+HI_09,hi,mujhe garmi lag rahi hai,temperature,Too hot,outward,Pankha chalaun?,8,Environmental need
+HI_10,hi,mujhe thand lag rahi hai,temperature,Too cold,inward,Kambal chahiye?,6,Environmental need
+HI_11,hi,tv chalu karo,entertainment,Need remote,outward,TV dekhna hai?,5,Object request
+HI_12,hi,chashma do,request_object,Spectacles needed,upward,Chashma dhoondh rahe ho?,3,Object request
+HI_13,hi,haan,yes,Yes,nod,Khana kha liya?,1,Affirmative
+HI_14,hi,nahi,no,No,shake,Chai piyoge?,2,Negative
+HI_15,hi,dhanyawad,thanks,Thank you,inward,Ye lo pani.,3,Politeness
+HI_16,hi,namaste,greeting,Greeting,outward,Kaise hain aap?,3,Social greeting
+HI_17,hi,phir se bolo,repeat_please,Please repeat,shake,Suna aapne kya kaha?,4,Clarification
+HI_18,hi,thoda ruko,wait,Please wait,outward,Chalein abhi?,4,Pacing
+HI_19,hi,gaana lagao,entertainment,Music request,outward,Bhajan sunoge?,4,Leisure need
+HI_20,hi,kya kaha aapne,repeat_please,Please repeat,shake,Maine dawa ke bare mein pucha.,5,Clarification
+HG_01,hinglish,pani dedo please,request_water,I want water,inward,Water chahiye aapko?,5,Direct need
+HG_02,hinglish,mujhe food chahiye,request_food,I want food,inward,Bhookh lagi hai kya?,5,Direct need
+HG_03,hinglish,meri medicine la do,request_medicine,Medicine needed,down,Tablets le li aapne?,6,Medical need
+HG_04,hinglish,bohot pain ho raha hai,pain,I am in pain,upward,Headache hai ya back pain?,6,Urgent need
+HG_05,hinglish,washroom jana hai,toilet,Washroom needed,inward,Help chahiye washroom ke liye?,5,Personal care
+HG_06,hinglish,please help karo,help_emergency,I need help,upward,Kya emergency hai?,4,Emergency assistance
+HG_07,hinglish,doctor ko call karo,call_person,Call someone,outward,Doctor ko bulana hai?,6,Communication request
+HG_08,hinglish,main bohot tired hoon,tired_rest,Tired,down,Neend aa rahi hai?,6,State of being
+HG_09,hinglish,room bohot hot hai,temperature,Too hot,outward,AC chalu kar doon?,5,Environmental need
+HG_10,hinglish,mujhe thand lag rahi,temperature,Too cold,inward,Blanket de doon?,6,Environmental need
+HG_11,hinglish,remote kahan hai,entertainment,Need remote,outward,Remote table par hai.,5,Object request
+HG_12,hinglish,spectacles pass karo,request_object,Spectacles needed,upward,Glasses kahan rakhe hain?,5,Object request
+HG_13,hinglish,yes bilkul,yes,Yes,nod,Sab theek hai na?,3,Affirmative
+HG_14,hinglish,no abhi nahi,no,No,shake,Abhi bahar jaoge?,4,Negative
+HG_15,hinglish,thank you so much,thanks,Thank you,inward,Ye lijiye aapki dawai.,4,Politeness
+HG_16,hinglish,hello kaise ho,greeting,Greeting,outward,Hello Good afternoon.,5,Social greeting
+HG_17,hinglish,please repeat karo,repeat_please,Please repeat,shake,Aapne suna nahi kya?,5,Clarification
+HG_18,hinglish,two minutes wait karo,wait,Please wait,outward,Ready ho gaye aap?,5,Pacing
+HG_19,hinglish,music play karo,entertainment,Music request,outward,Gaana sunna hai?,4,Leisure need
+HG_20,hinglish,kya bola aapne,repeat_please,Please repeat,shake,Maine doctor se baat ki thi.,4,Clarification
+

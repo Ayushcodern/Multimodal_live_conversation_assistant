@@ -1,0 +1,25 @@
+{
+  "total_samples": 4,
+  "metrics": {
+    "raw_scribe": {
+      "top1_accuracy": 50.0,
+      "mean_wer": 0.0,
+      "mean_latency_s": 0.05
+    },
+    "voice_only": {
+      "top1_accuracy": 100.0,
+      "mean_wer": 0.0,
+      "mean_latency_s": 9.25
+    },
+    "voice_context": {
+      "top1_accuracy": 100.0,
+      "mean_wer": 0.0,
+      "mean_latency_s": 12.13
+    },
+    "full_fusion": {
+      "top1_accuracy": 75.0,
+      "mean_wer": 25.0,
+      "mean_latency_s": 5.48
+    }
+  }
+}

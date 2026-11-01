@@ -1,0 +1,5 @@
+id,language,reference_text,true_intent,full_fusion_text,full_fusion_intent,wer_raw,wer_fusion,hit_fusion,lat_fusion_s
+EN_01,en,I need water,request_water,I need water,request_water,0.000,0.000,True,2.37
+EN_02,en,I want food,request_food,ERROR,none,0.000,1.000,False,2.41
+EN_03,en,I need my medicine,request_medicine,I need my medicine.,request_medicine,0.000,0.000,True,2.67
+EN_04,en,I am in pain,pain,I am in pain,pain,0.000,0.000,True,14.46

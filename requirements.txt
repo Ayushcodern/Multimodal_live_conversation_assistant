@@ -1,0 +1,22 @@
+# Web Interface
+gradio>=4.30.0
+
+# Computer Vision & Sensor Tracking
+opencv-python>=4.8.0
+mediapipe>=0.10.14
+
+# Audio Recording & Signal Processing
+sounddevice>=0.4.6
+numpy>=1.24.0
+scipy>=1.11.0
+
+# API Clients & AI
+httpx>=0.25.0
+elevenlabs>=1.0.0
+google-genai>=0.1.1
+
+# Config & Validation
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.1
+
