@@ -7,6 +7,7 @@ from explicitly confirmed patient messages.
 """
 
 from typing import Optional, Tuple, Set
+import httpx
 from elevenlabs.client import ElevenLabs
 from config.settings import get_env_var, load_project_env
 
@@ -61,9 +62,17 @@ class FlashTTS:
             return
 
         try:
-            self._client = ElevenLabs(api_key=api_key)
+            custom_transport = httpx.HTTPTransport(retries=3)
+            custom_http = httpx.Client(
+                transport=custom_transport,
+                timeout=httpx.Timeout(30.0, connect=10.0),
+            )
+            self._client = ElevenLabs(api_key=api_key, httpx_client=custom_http)
         except Exception:
-            self._client = None
+            try:
+                self._client = ElevenLabs(api_key=api_key)
+            except Exception:
+                self._client = None
 
     @property
     def is_configured(self) -> bool:
@@ -167,6 +176,13 @@ class FlashTTS:
                     None,
                     f"ElevenLabs Error (402 Payment Required): Voice ID '{active_voice_id}' is a restricted Community/Library voice.\n"
                     "Free accounts can only use ElevenLabs premade voices via API (e.g. Roger: CwhRBWXzGAHq8TQ4Fs17).",
+                )
+            if "11001" in err_str or "getaddrinfo" in err_str:
+                return (
+                    False,
+                    None,
+                    "Network Connection Error: DNS resolution failed ([Errno 11001]). "
+                    "Unable to reach ElevenLabs TTS server. Please check your internet connection.",
                 )
             return False, None, f"ElevenLabs TTS Error: {err_str}"
 
