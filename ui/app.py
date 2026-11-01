@@ -156,15 +156,14 @@ def create_app(
     }
     """
 
-    with gr.Blocks(title="PS-16: Multimodal Live Assistant", css=custom_css) as demo:
+    with gr.Blocks(title="Sahara: Assistive Communication", css=custom_css) as demo:
         # Isolated per-browser-session state
         session_state = gr.State(delete_callback=None, value=SessionState)
 
         gr.Markdown(
             """
-            # PS-16: Multimodal Live Conversation Assistant
-            ### AI-Powered Assistive Communication for People with Speech Impairments
-            *Combines genuine speech transcription, patient-calibrated gestures, and live visual signals with strict confirmation before speech synthesis.*
+            # Sahara
+            ### Multimodal Assistive Communication
             """
         )
 
@@ -196,21 +195,10 @@ def create_app(
                 urg_btn_breathe = gr.Button("🫁 Trouble breathing / dizzy.", variant="secondary", scale=1)
                 urg_btn_cancel = gr.Button("🛑 Cancel / Clear Urgent Alert", variant="secondary", scale=1)
 
-        # Compact Accessible Header Bar
-        with gr.Row():
-            with gr.Column(scale=3):
-                gr.Markdown(
-                    """
-                    # 🗣️ PS-16: Multimodal Live Assistant
-                    **AI-Powered Assistive Communication for People with Speech Impairments**
-                    *Communicate immediately with Quick Phrases, or hold natural conversations via Speech, Gestures & AI.*
-                    """
-                )
-            with gr.Column(scale=2):
-                with gr.Row():
-                    cam_pill = gr.Textbox(label="Camera", value="Off", interactive=False, scale=1)
-                    mic_pill = gr.Textbox(label="Microphone", value="Ready", interactive=False, scale=1)
-                    confirm_pill = gr.Textbox(label="Voice Output", value="Locked", interactive=False, scale=1)
+        # Hidden status components for backend callback compatibility
+        cam_pill = gr.Textbox(label="Camera", value="Off", interactive=False, visible=False)
+        mic_pill = gr.Textbox(label="Microphone", value="Ready", interactive=False, visible=False)
+        confirm_pill = gr.Textbox(label="Voice Output", value="Locked", interactive=False, visible=False)
 
         # 5 User-Centred Sections (Blueprint Milestone 2)
         with gr.Tabs() as main_nav_tabs:
